@@ -2121,7 +2121,7 @@ var render = function render() {
     staticClass: "col-md-4"
   }, [_c("img", {
     staticStyle: {
-      width: "300px"
+      width: "270px"
     },
     attrs: {
       src: _vm.post.image,
@@ -2141,9 +2141,19 @@ var render = function render() {
     staticClass: "card-text"
   }, [_c("small", {
     staticClass: "text-muted"
-  }, [_vm._v("Last updated " + _vm._s(_vm.UpdatedAt))])]), _vm._v(" "), _c("span", {
+  }, [_vm._v("Last updated " + _vm._s(_vm.UpdatedAt))])]), _vm._v(" "), _c("p", {
+    staticClass: "card-text"
+  }, [_c("small", {
+    staticClass: "text-muted"
+  }, [_vm._v("Author: " + _vm._s(_vm.post.user.name))])]), _vm._v(" "), _c("span", {
     "class": "badge badge-".concat(_vm.post.category ? _vm.post.category.color : "light")
-  }, [_vm._v("\n            " + _vm._s(_vm.post.category ? _vm.post.category.label : "Nessuna") + "\n          ")])])])])])]);
+  }, [_vm._v("\n            " + _vm._s(_vm.post.category ? _vm.post.category.label : "Nessuna") + "\n          ")]), _vm._v(" "), _vm._l(_vm.post.tags, function (tag) {
+    return _c("span", {
+      key: tag.id,
+      staticClass: "badge badge-pill",
+      style: "background-color:".concat(tag ? tag.color : "light")
+    }, [_vm._v("\n            " + _vm._s(tag ? tag.label : "Nessuna") + "\n          ")]);
+  })], 2)])])])]);
 };
 
 var staticRenderFns = [];

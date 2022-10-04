@@ -3,7 +3,7 @@
     <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img style="width: 300px;" :src="post.image" :alt="post.slug">
+          <img style="width: 270px;" :src="post.image" :alt="post.slug">
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -11,8 +11,12 @@
             <h5 class="card-subtitle mb-2 text-muted">{{ publishedAt }}</h5>
             <p class="card-text">{{ post.content }}</p>
             <p class="card-text"><small class="text-muted">Last updated {{ UpdatedAt }}</small></p>
+            <p class="card-text"><small class="text-muted">Author: {{ post.user.name }}</small></p>
             <span :class="`badge badge-${post.category ? post.category.color : 'light' }`">
               {{post.category ? post.category.label : 'Nessuna'}}
+            </span>
+            <span v-for="tag in post.tags" :key="tag.id" class="badge badge-pill" :style="`background-color:${tag ? tag.color : 'light'}`">
+              {{tag ? tag.label : 'Nessuna'}}
             </span>
           </div>
         </div>
