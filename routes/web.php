@@ -37,4 +37,4 @@ Route::middleware('auth')->name('admin.')->namespace('Admin')->prefix('admin')->
 
 });
 
-Route::get('/{any}', 'Guest\HomeController@index')->name('guest.home')->where('any', '.*');
+Route::get('/', 'Guest\HomeController@index')->name('guest.home');
