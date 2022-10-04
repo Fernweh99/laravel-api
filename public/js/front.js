@@ -1950,6 +1950,22 @@ __webpack_require__.r(__webpack_exports__);
   name: 'CardPost',
   props: {
     post: Object
+  },
+  computed: {
+    publishedAt: function publishedAt() {
+      var date = new Date(this.post.created_at);
+      var day = date.getDate();
+      var month = date.getMonth();
+      var year = date.getFullYear();
+      return "".concat(day, "/").concat(month, "/").concat(year);
+    },
+    UpdatedAt: function UpdatedAt() {
+      var date = new Date(this.post.updated_at);
+      var day = date.getDate();
+      var month = date.getMonth();
+      var year = date.getFullYear();
+      return "".concat(day, "/").concat(month, "/").concat(year);
+    }
   }
 });
 
@@ -2098,23 +2114,36 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", [_c("div", {
-    staticClass: "card col m-3",
-    staticStyle: {
-      width: "21.5rem"
-    }
+    staticClass: "card mb-3"
+  }, [_c("div", {
+    staticClass: "row no-gutters"
+  }, [_c("div", {
+    staticClass: "col-md-4"
   }, [_c("img", {
-    staticClass: "card-img-top",
+    staticStyle: {
+      width: "300px"
+    },
     attrs: {
       src: _vm.post.image,
       alt: _vm.post.slug
     }
-  }), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "col-md-8"
+  }, [_c("div", {
     staticClass: "card-body"
   }, [_c("h5", {
     staticClass: "card-title"
-  }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("p", {
+  }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("h5", {
+    staticClass: "card-subtitle mb-2 text-muted"
+  }, [_vm._v(_vm._s(_vm.publishedAt))]), _vm._v(" "), _c("p", {
     staticClass: "card-text"
-  }, [_vm._v(_vm._s(_vm.post.content))])])])]);
+  }, [_vm._v(_vm._s(_vm.post.content))]), _vm._v(" "), _c("p", {
+    staticClass: "card-text"
+  }, [_c("small", {
+    staticClass: "text-muted"
+  }, [_vm._v("Last updated " + _vm._s(_vm.UpdatedAt))])]), _vm._v(" "), _c("span", {
+    "class": "badge badge-".concat(_vm.post.category ? _vm.post.category.color : "light")
+  }, [_vm._v("\n            " + _vm._s(_vm.post.category ? _vm.post.category.label : "Nessuna") + "\n          ")])])])])])]);
 };
 
 var staticRenderFns = [];

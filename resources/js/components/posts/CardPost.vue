@@ -1,10 +1,21 @@
 <template>
   <div>
-    <div class="card col m-3" style="width: 21.5rem;">
-      <img :src="post.image" class="card-img-top" :alt="post.slug">
-      <div class="card-body">
-        <h5 class="card-title">{{ post.title }}</h5>
-        <p class="card-text">{{ post.content }}</p>
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img style="width: 300px;" :src="post.image" :alt="post.slug">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <h5 class="card-subtitle mb-2 text-muted">{{ publishedAt }}</h5>
+            <p class="card-text">{{ post.content }}</p>
+            <p class="card-text"><small class="text-muted">Last updated {{ UpdatedAt }}</small></p>
+            <span :class="`badge badge-${post.category ? post.category.color : 'light' }`">
+              {{post.category ? post.category.label : 'Nessuna'}}
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -15,6 +26,24 @@ export default {
   name: 'CardPost',
   props: {
     post : Object,
+  },
+  computed: {
+    publishedAt(){
+      const date = new Date(this.post.created_at);
+      let day = date.getDate();
+      let month = date.getMonth();
+      let year = date.getFullYear();
+
+      return `${day}/${month}/${year}`;
+    },
+    UpdatedAt(){
+      const date = new Date(this.post.updated_at);
+      let day = date.getDate();
+      let month = date.getMonth();
+      let year = date.getFullYear();
+
+      return `${day}/${month}/${year}`;
+    }
   }
 }
 </script>
