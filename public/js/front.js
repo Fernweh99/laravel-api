@@ -1947,7 +1947,28 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'IndexPosts'
+  name: 'IndexPosts',
+  data: function data() {
+    return {
+      posts: []
+    };
+  },
+  methods: {
+    fetchPosts: function fetchPosts() {
+      var _this = this;
+
+      axios.get('http://localhost:8000/api/posts').then(function (res) {
+        _this.posts = res.data;
+      })["catch"](function (err) {
+        console.log(err);
+      }).then(function () {
+        console.log('Chiamata Terminata');
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.fetchPosts();
+  }
 });
 
 /***/ }),
@@ -2059,7 +2080,9 @@ var staticRenderFns = [function () {
     staticClass: "posts"
   }, [_c("div", {
     staticClass: "container"
-  }, [_c("h5", [_vm._v("Posts:")])])]);
+  }, [_c("h5", [_vm._v("Posts:")]), _vm._v(" "), _c("div", {
+    staticClass: "list-posts"
+  })])]);
 }];
 render._withStripped = true;
 
