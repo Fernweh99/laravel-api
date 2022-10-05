@@ -1934,6 +1934,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/AboutPage.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/AboutPage.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "AboutPage"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/HomePage.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/HomePage.vue?vue&type=script&lang=js& ***!
@@ -1954,17 +1969,46 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/aboutUs.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/aboutUs.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/PostDetailPage.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/PostDetailPage.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _posts_CardPost_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../posts/CardPost.vue */ "./resources/js/components/posts/CardPost.vue");
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "AboutUs"
+  name: "PostDetailPage",
+  components: {
+    CardPost: _posts_CardPost_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      post: []
+    };
+  },
+  methods: {
+    fetchPost: function fetchPost() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://localhost:8000/api/posts/" + this.$route.params.id).then(function (res) {
+        _this.post = res.data;
+      })["catch"](function (err) {
+        console.error(err);
+      }).then(function () {
+        console.log("chiamata terminata!");
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.fetchPost();
+  }
 });
 
 /***/ }),
@@ -2148,6 +2192,40 @@ render._withStripped = true;
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/AboutPage.vue?vue&type=template&id=3ed6af16&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/AboutPage.vue?vue&type=template&id=3ed6af16& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _vm._m(0);
+};
+
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "container",
+    attrs: {
+      id: "about"
+    }
+  }, [_c("h3", [_vm._v("About Us:")]), _vm._v(" "), _c("p", [_vm._v("Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magni deserunt distinctio error, debitis architecto. Numquam quaerat consequuntur cum aut molestias nisi ut laboriosam eaque, alias voluptatem velit similique ad!\n  Necessitatibus neque debitis accusamus esse distinctio. Dolor numquam tempore ducimus tenetur temporibus, libero molestiae commodi sequi rem incidunt, reiciendis enim porro atque accusamus, consectetur molestias fugiat veritatis delectus! Quos, quia!\n  Architecto recusandae cupiditate voluptas soluta inventore optio ea voluptatem perspiciatis quisquam nam aperiam fugiat, suscipit officiis amet culpa aut est commodi sapiente saepe! Et sequi provident explicabo dignissimos, debitis tempore.\n  Quis, pariatur harum? Corporis eum perspiciatis exercitationem recusandae laudantium facilis est, quia tempore autem laborum incidunt porro! Maxime consectetur accusamus ipsum dicta facilis explicabo neque, deserunt, reprehenderit ut, hic harum.\n  Perspiciatis odit deleniti necessitatibus, ullam nesciunt nisi asperiores voluptatibus atque temporibus, expedita error sit fugiat natus voluptas reiciendis commodi quidem. Minus quos dignissimos odit corporis veritatis eligendi rem ducimus inventore.\n  Ipsum adipisci a quam neque impedit. Odit ducimus error voluptate quibusdam? Corrupti, vero itaque exercitationem quas laudantium ipsam quod quibusdam amet distinctio animi numquam fugit. Culpa qui animi facere odio.\n  Saepe cumque impedit doloremque est atque vitae, harum expedita mollitia laboriosam perspiciatis officia deleniti voluptatum esse laudantium eius. Quae quos at quis consequatur praesentium! Eum laudantium maiores nisi est reprehenderit.\n  Consequuntur nihil nemo, quisquam ipsum, earum itaque architecto officia doloremque minima dignissimos aspernatur dolor odio distinctio quae corporis, praesentium fuga debitis doloribus ipsam dolorum atque! Magnam animi aspernatur at pariatur!\n  Nam qui tempore, cupiditate laudantium perspiciatis aut atque deserunt impedit. Quidem possimus tempora deleniti cumque culpa eveniet ratione laborum totam ad quam soluta, veritatis aliquam recusandae repellendus corporis sed accusamus.\n  Dolor ut harum, consequatur ipsum alias totam obcaecati maiores quisquam excepturi molestiae ducimus aspernatur accusantium assumenda perferendis? Quisquam ratione consequuntur dolorum minima eos alias aperiam, suscipit qui sit neque quibusdam!\n  Magnam facilis a praesentium asperiores, tenetur sint quaerat quia iusto ratione exercitationem minima illo, similique mollitia atque explicabo incidunt tempora reiciendis iure aperiam nostrum cupiditate. Illo doloremque vitae natus necessitatibus!\n  Tempora, aperiam natus rem perferendis numquam accusamus voluptatibus blanditiis quasi nihil fugiat debitis suscipit molestias vel a perspiciatis tempore sunt et ad ipsa! Totam impedit similique excepturi vitae, temporibus animi.\n  Debitis quod culpa possimus iure cumque aspernatur tempore molestiae aperiam aut corrupti. Porro, mollitia, perspiciatis cupiditate laboriosam amet iusto voluptatem accusantium necessitatibus hic atque, nemo eum eos veniam perferendis qui!\n  Quo debitis maxime libero dignissimos numquam ipsum culpa. Sit commodi eligendi nobis quaerat voluptatem inventore molestiae sed vel accusamus, impedit molestias aspernatur nam aut tenetur ipsa a libero, porro dolor.\n  Debitis aperiam cum illum ipsa deserunt! Quaerat obcaecati porro, earum temporibus rerum ut omnis. Aut impedit, molestiae nobis dolor pariatur, quisquam nam magni, cupiditate similique eveniet neque voluptas nemo tempore.\n  Vel, quis nihil harum alias eveniet odit, nostrum iusto, libero accusantium a soluta ab! Eveniet, voluptatum quasi! Non iste necessitatibus dignissimos exercitationem? Iste obcaecati delectus impedit illum reiciendis sed nesciunt.\n  Atque autem, quia saepe ratione consectetur dolore, repellat necessitatibus magnam qui dolorem nemo fugit fugiat in explicabo sit. Doloribus aspernatur laboriosam asperiores non, eum officia et dolores reprehenderit consequuntur ea.\n  Ab unde molestiae dolore nam aliquam hic vitae ratione similique officia iste incidunt repellendus, architecto voluptate error enim voluptates saepe voluptatibus asperiores autem numquam quae! Necessitatibus ut corrupti earum nemo?\n  Velit aspernatur delectus voluptatibus minima at aliquam nihil tempore unde mollitia numquam! Soluta, natus consectetur! Velit molestiae numquam optio maiores id consectetur rerum quam expedita tempora consequatur! Exercitationem, sint totam!\n  A, debitis dolores distinctio, tenetur optio eaque ducimus reprehenderit corporis nam eum temporibus! Aliquid molestiae vitae atque eos voluptates deleniti beatae! Deserunt ipsum possimus repellendus nesciunt veniam nihil pariatur facilis.")])]);
+}];
+render._withStripped = true;
+
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/HomePage.vue?vue&type=template&id=317790a4&":
 /*!***********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/HomePage.vue?vue&type=template&id=317790a4& ***!
@@ -2176,10 +2254,10 @@ render._withStripped = true;
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/aboutUs.vue?vue&type=template&id=4618b8f6&":
-/*!**********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/aboutUs.vue?vue&type=template&id=4618b8f6& ***!
-  \**********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/PostDetailPage.vue?vue&type=template&id=b1048f54&":
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/PostDetailPage.vue?vue&type=template&id=b1048f54& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2191,20 +2269,16 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
+  return _c("div", {
+    staticClass: "post container"
+  }, [_c("CardPost", {
+    attrs: {
+      post: _vm.post
+    }
+  })], 1);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "container",
-    attrs: {
-      id: "about"
-    }
-  }, [_c("h3", [_vm._v("About Us:")]), _vm._v(" "), _c("p", [_vm._v("Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magni deserunt distinctio error, debitis architecto. Numquam quaerat consequuntur cum aut molestias nisi ut laboriosam eaque, alias voluptatem velit similique ad!\n  Necessitatibus neque debitis accusamus esse distinctio. Dolor numquam tempore ducimus tenetur temporibus, libero molestiae commodi sequi rem incidunt, reiciendis enim porro atque accusamus, consectetur molestias fugiat veritatis delectus! Quos, quia!\n  Architecto recusandae cupiditate voluptas soluta inventore optio ea voluptatem perspiciatis quisquam nam aperiam fugiat, suscipit officiis amet culpa aut est commodi sapiente saepe! Et sequi provident explicabo dignissimos, debitis tempore.\n  Quis, pariatur harum? Corporis eum perspiciatis exercitationem recusandae laudantium facilis est, quia tempore autem laborum incidunt porro! Maxime consectetur accusamus ipsum dicta facilis explicabo neque, deserunt, reprehenderit ut, hic harum.\n  Perspiciatis odit deleniti necessitatibus, ullam nesciunt nisi asperiores voluptatibus atque temporibus, expedita error sit fugiat natus voluptas reiciendis commodi quidem. Minus quos dignissimos odit corporis veritatis eligendi rem ducimus inventore.\n  Ipsum adipisci a quam neque impedit. Odit ducimus error voluptate quibusdam? Corrupti, vero itaque exercitationem quas laudantium ipsam quod quibusdam amet distinctio animi numquam fugit. Culpa qui animi facere odio.\n  Saepe cumque impedit doloremque est atque vitae, harum expedita mollitia laboriosam perspiciatis officia deleniti voluptatum esse laudantium eius. Quae quos at quis consequatur praesentium! Eum laudantium maiores nisi est reprehenderit.\n  Consequuntur nihil nemo, quisquam ipsum, earum itaque architecto officia doloremque minima dignissimos aspernatur dolor odio distinctio quae corporis, praesentium fuga debitis doloribus ipsam dolorum atque! Magnam animi aspernatur at pariatur!\n  Nam qui tempore, cupiditate laudantium perspiciatis aut atque deserunt impedit. Quidem possimus tempora deleniti cumque culpa eveniet ratione laborum totam ad quam soluta, veritatis aliquam recusandae repellendus corporis sed accusamus.\n  Dolor ut harum, consequatur ipsum alias totam obcaecati maiores quisquam excepturi molestiae ducimus aspernatur accusantium assumenda perferendis? Quisquam ratione consequuntur dolorum minima eos alias aperiam, suscipit qui sit neque quibusdam!\n  Magnam facilis a praesentium asperiores, tenetur sint quaerat quia iusto ratione exercitationem minima illo, similique mollitia atque explicabo incidunt tempora reiciendis iure aperiam nostrum cupiditate. Illo doloremque vitae natus necessitatibus!\n  Tempora, aperiam natus rem perferendis numquam accusamus voluptatibus blanditiis quasi nihil fugiat debitis suscipit molestias vel a perspiciatis tempore sunt et ad ipsa! Totam impedit similique excepturi vitae, temporibus animi.\n  Debitis quod culpa possimus iure cumque aspernatur tempore molestiae aperiam aut corrupti. Porro, mollitia, perspiciatis cupiditate laboriosam amet iusto voluptatem accusantium necessitatibus hic atque, nemo eum eos veniam perferendis qui!\n  Quo debitis maxime libero dignissimos numquam ipsum culpa. Sit commodi eligendi nobis quaerat voluptatem inventore molestiae sed vel accusamus, impedit molestias aspernatur nam aut tenetur ipsa a libero, porro dolor.\n  Debitis aperiam cum illum ipsa deserunt! Quaerat obcaecati porro, earum temporibus rerum ut omnis. Aut impedit, molestiae nobis dolor pariatur, quisquam nam magni, cupiditate similique eveniet neque voluptas nemo tempore.\n  Vel, quis nihil harum alias eveniet odit, nostrum iusto, libero accusantium a soluta ab! Eveniet, voluptatum quasi! Non iste necessitatibus dignissimos exercitationem? Iste obcaecati delectus impedit illum reiciendis sed nesciunt.\n  Atque autem, quia saepe ratione consectetur dolore, repellat necessitatibus magnam qui dolorem nemo fugit fugiat in explicabo sit. Doloribus aspernatur laboriosam asperiores non, eum officia et dolores reprehenderit consequuntur ea.\n  Ab unde molestiae dolore nam aliquam hic vitae ratione similique officia iste incidunt repellendus, architecto voluptate error enim voluptates saepe voluptatibus asperiores autem numquam quae! Necessitatibus ut corrupti earum nemo?\n  Velit aspernatur delectus voluptatibus minima at aliquam nihil tempore unde mollitia numquam! Soluta, natus consectetur! Velit molestiae numquam optio maiores id consectetur rerum quam expedita tempora consequatur! Exercitationem, sint totam!\n  A, debitis dolores distinctio, tenetur optio eaque ducimus reprehenderit corporis nam eum temporibus! Aliquid molestiae vitae atque eos voluptates deleniti beatae! Deserunt ipsum possimus repellendus nesciunt veniam nihil pariatur facilis.")])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -2243,9 +2317,21 @@ var render = function render() {
     staticClass: "col-md-8"
   }, [_c("div", {
     staticClass: "card-body"
+  }, [_c("div", {
+    staticClass: "d-flex justify-content-between align-items-center"
   }, [_c("h5", {
     staticClass: "card-title"
-  }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("h5", {
+  }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("router-link", {
+    staticClass: "btn btn-primary btn-sm",
+    attrs: {
+      to: {
+        name: "post-detail",
+        params: {
+          id: _vm.post.id
+        }
+      }
+    }
+  }, [_vm._v("\n              Vedi\n            ")])], 1), _vm._v(" "), _c("h5", {
     staticClass: "card-subtitle mb-2 text-muted"
   }, [_vm._v(_vm._s(_vm.publishedAt))]), _vm._v(" "), _c("p", {
     staticClass: "card-text"
@@ -53970,6 +54056,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/AboutPage.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/pages/AboutPage.vue ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AboutPage_vue_vue_type_template_id_3ed6af16___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AboutPage.vue?vue&type=template&id=3ed6af16& */ "./resources/js/components/pages/AboutPage.vue?vue&type=template&id=3ed6af16&");
+/* harmony import */ var _AboutPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AboutPage.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/AboutPage.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AboutPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AboutPage_vue_vue_type_template_id_3ed6af16___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AboutPage_vue_vue_type_template_id_3ed6af16___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/AboutPage.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/AboutPage.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/pages/AboutPage.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AboutPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./AboutPage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/AboutPage.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AboutPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/AboutPage.vue?vue&type=template&id=3ed6af16&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/pages/AboutPage.vue?vue&type=template&id=3ed6af16& ***!
+  \************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_AboutPage_vue_vue_type_template_id_3ed6af16___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!../../../../node_modules/vue-loader/lib??vue-loader-options!./AboutPage.vue?vue&type=template&id=3ed6af16& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/AboutPage.vue?vue&type=template&id=3ed6af16&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_AboutPage_vue_vue_type_template_id_3ed6af16___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_AboutPage_vue_vue_type_template_id_3ed6af16___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/HomePage.vue":
 /*!****************************************************!*\
   !*** ./resources/js/components/pages/HomePage.vue ***!
@@ -54039,17 +54194,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/pages/aboutUs.vue":
-/*!***************************************************!*\
-  !*** ./resources/js/components/pages/aboutUs.vue ***!
-  \***************************************************/
+/***/ "./resources/js/components/pages/PostDetailPage.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/pages/PostDetailPage.vue ***!
+  \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _aboutUs_vue_vue_type_template_id_4618b8f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./aboutUs.vue?vue&type=template&id=4618b8f6& */ "./resources/js/components/pages/aboutUs.vue?vue&type=template&id=4618b8f6&");
-/* harmony import */ var _aboutUs_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./aboutUs.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/aboutUs.vue?vue&type=script&lang=js&");
+/* harmony import */ var _PostDetailPage_vue_vue_type_template_id_b1048f54___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PostDetailPage.vue?vue&type=template&id=b1048f54& */ "./resources/js/components/pages/PostDetailPage.vue?vue&type=template&id=b1048f54&");
+/* harmony import */ var _PostDetailPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PostDetailPage.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/PostDetailPage.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -54059,9 +54214,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _aboutUs_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _aboutUs_vue_vue_type_template_id_4618b8f6___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _aboutUs_vue_vue_type_template_id_4618b8f6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _PostDetailPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PostDetailPage_vue_vue_type_template_id_b1048f54___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PostDetailPage_vue_vue_type_template_id_b1048f54___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -54071,38 +54226,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/pages/aboutUs.vue"
+component.options.__file = "resources/js/components/pages/PostDetailPage.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/pages/aboutUs.vue?vue&type=script&lang=js&":
-/*!****************************************************************************!*\
-  !*** ./resources/js/components/pages/aboutUs.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************/
+/***/ "./resources/js/components/pages/PostDetailPage.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/pages/PostDetailPage.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_aboutUs_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./aboutUs.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/aboutUs.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_aboutUs_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PostDetailPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./PostDetailPage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/PostDetailPage.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PostDetailPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/components/pages/aboutUs.vue?vue&type=template&id=4618b8f6&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/components/pages/aboutUs.vue?vue&type=template&id=4618b8f6& ***!
-  \**********************************************************************************/
+/***/ "./resources/js/components/pages/PostDetailPage.vue?vue&type=template&id=b1048f54&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/pages/PostDetailPage.vue?vue&type=template&id=b1048f54& ***!
+  \*****************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_aboutUs_vue_vue_type_template_id_4618b8f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!../../../../node_modules/vue-loader/lib??vue-loader-options!./aboutUs.vue?vue&type=template&id=4618b8f6& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/aboutUs.vue?vue&type=template&id=4618b8f6&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_aboutUs_vue_vue_type_template_id_4618b8f6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_PostDetailPage_vue_vue_type_template_id_b1048f54___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!../../../../node_modules/vue-loader/lib??vue-loader-options!./PostDetailPage.vue?vue&type=template&id=b1048f54& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/PostDetailPage.vue?vue&type=template&id=b1048f54&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_PostDetailPage_vue_vue_type_template_id_b1048f54___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_aboutUs_vue_vue_type_template_id_4618b8f6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_PostDetailPage_vue_vue_type_template_id_b1048f54___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -54308,7 +54463,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_HomePage_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/HomePage.vue */ "./resources/js/components/pages/HomePage.vue");
-/* harmony import */ var _components_pages_aboutUs_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/aboutUs.vue */ "./resources/js/components/pages/aboutUs.vue");
+/* harmony import */ var _components_pages_AboutPage_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/AboutPage.vue */ "./resources/js/components/pages/AboutPage.vue");
+/* harmony import */ var _components_pages_PostDetailPage_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/pages/PostDetailPage.vue */ "./resources/js/components/pages/PostDetailPage.vue");
+
 
 
 
@@ -54323,8 +54480,12 @@ var routes = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     name: 'home'
   }, {
     path: '/about',
-    component: _components_pages_aboutUs_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    component: _components_pages_AboutPage_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     name: 'about'
+  }, {
+    path: '/post/:id',
+    component: _components_pages_PostDetailPage_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    name: 'post-detail'
   }]
 });
 /* harmony default export */ __webpack_exports__["default"] = (routes);
