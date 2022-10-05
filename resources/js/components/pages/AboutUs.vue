@@ -1,5 +1,5 @@
 <template>
-  <div id="about">
+  <div id="about" class="container">
     <h3>About Us:</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magni deserunt distinctio error, debitis architecto. Numquam quaerat consequuntur cum aut molestias nisi ut laboriosam eaque, alias voluptatem velit similique ad!
     Necessitatibus neque debitis accusamus esse distinctio. Dolor numquam tempore ducimus tenetur temporibus, libero molestiae commodi sequi rem incidunt, reiciendis enim porro atque accusamus, consectetur molestias fugiat veritatis delectus! Quos, quia!
